@@ -59,6 +59,12 @@ Para descargar el proyecto puedes clonar el repositorio:
 
 Si quieres descargar una lección en concreto, ejecuta el siguiente comando git:
 
+    git checkout tags/<leccionXX> -b <nombre-de-tu-rama>
+
+Por ejemplo:
+
+    git checkout tags/leccion1 -b leccion1
+
 ### Variables de entorno
 
 Para que el miniblog funcione debes crear las siguientes variables de entorno:
