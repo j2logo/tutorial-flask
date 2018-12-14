@@ -6,6 +6,8 @@ Durante las diferentes lecciones se verá todo aquello que, personalmente, consi
 hora de desarrollar una aplicación web (cualquier aplicación web, no solo en Flask). Por tanto, se repasarán aspectos
 esenciales como gestión de usuarios, control de errores, trazas de log, seguridad, test o arquitectura.
 
+Puedes seguir el tutorial en https://j2logo.com/tutorial-flask-espanol/
+
 ## Funcionalidades del miniblog
 
 El miniblog a desarrollar tendrá las siguientes características:
