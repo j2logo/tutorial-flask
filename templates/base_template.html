@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="{{ url_for("static", filename="base.css") }}">
 </head>
 <body>
+<div>
+    <ul class="user-info">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        {% if current_user.is_anonymous %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li> | </li>
+            <li><a href="{{ url_for('show_signup_form') }}">Registrar</a></li>
+        {% else %}
+            <li>{{ current_user.name }}</li>
+            <li> | </li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% endif %}
+    </ul>
+</div>
 {% block content %}{% endblock %}
 </body>
 </html>
