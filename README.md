@@ -73,12 +73,12 @@ Para que el miniblog funcione debes crear las siguientes variables de entorno:
 
 #### Linux/Mac
 
-    export FLASK_APP="run.py"
+    export FLASK_APP="entrypoint"
     export FLASK_ENV="development"
 
 #### Windows
 
-    set "FLASK_APP=run.py"
+    set "FLASK_APP=entrypoint"
     set "FLASK_ENV=development"
     
 > Mi recomendación para las pruebas es que añadas esas variables en el fichero "activate" o "activate.bat"
