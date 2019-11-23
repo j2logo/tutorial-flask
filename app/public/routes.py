@@ -24,3 +24,10 @@ def show_post(slug):
     if post is None:
         abort(404)
     return render_template("public/post_view.html", post=post)
+
+
+@public_bp.route("/error")
+def show_error():
+    res = 1 / 0
+    posts = Post.get_all()
+    return render_template("public/index.html", posts=posts)

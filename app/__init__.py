@@ -6,7 +6,7 @@ FECHA DE CREACIÓN: 24/05/2019
 
 """
 
-from flask import Flask
+from flask import Flask, render_template
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 
@@ -39,4 +39,18 @@ def create_app(settings_module):
     from .public import public_bp
     app.register_blueprint(public_bp)
 
+    # Custom error handlers
+    register_error_handlers(app)
+
     return app
+
+
+def register_error_handlers(app):
+
+    @app.errorhandler(500)
+    def base_error_handler(e):
+        return render_template('500.html'), 500
+
+    @app.errorhandler(404)
+    def error_404_handler(e):
+        return render_template('404.html'), 404
