@@ -24,3 +24,13 @@ APP_ENV_DEVELOPMENT = 'development'
 APP_ENV_STAGING = 'staging'
 APP_ENV_PRODUCTION = 'production'
 APP_ENV = ''
+
+# Configuración del email
+MAIL_SERVER = 'tu servidor smtp'
+MAIL_PORT = 587
+MAIL_USERNAME = 'tu correo'
+MAIL_PASSWORD = 'tu contraseña'
+DONT_REPLY_FROM_EMAIL = 'dirección from'
+ADMINS = ('juanjo@j2logo.com', )
+MAIL_USE_TLS = True
+MAIL_DEBUG = False

@@ -8,4 +8,5 @@
 - leccion6 - Lección 6: Estructura de un proyecto con Flask. Blueprints (25/05/2019)
 - leccion7 - Lección 7: Parámetros de configuración de un proyecto (21/07/2019)
 - leccion8 - Lección 8: Gestión de errores (23/11/2019)
+- leccion9 - Lección 9: Logs en Flask (13/01/2020)
 
