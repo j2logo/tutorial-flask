@@ -28,7 +28,7 @@ El miniblog a desarrollar tendrá las siguientes características:
 * Lección 7: Parámetros de configuración de un proyecto Flask
 * Lección 8: Gestión de errores
 * Lección 9: Logs en Flask
-* Lección 10: Securizando los endpoints
+* Lección 10: Añadiendo seguridad en las vistas
 * Lección 11: Actualizando la base de datos
 * Lección 12: Test con Flask
 * Lección 13: Paginando las consultas de base de datos
