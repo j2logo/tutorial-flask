@@ -39,12 +39,17 @@ class Post(db.Model):
                 count += 1
                 self.title_slug = f'{self.title_slug}-{count}'
 
-    def public_url(self):
-        return url_for('public.show_post', slug=self.title_slug)
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
 
     @staticmethod
     def get_by_slug(slug):
         return Post.query.filter_by(title_slug=slug).first()
+
+    @staticmethod
+    def get_by_id(id):
+        return Post.query.get(id)
 
     @staticmethod
     def get_all():

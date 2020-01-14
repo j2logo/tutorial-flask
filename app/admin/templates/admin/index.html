@@ -1,0 +1,12 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+    Miniblog | Admin
+{% endblock %}
+
+{% block content %}
+    <ul>
+        <li><a href="{{ url_for('admin.list_posts') }}">Posts</a></li>
+        <li><a href="{{ url_for('admin.list_users') }}">Usuarios</a></li>
+    </ul>
+{% endblock %}

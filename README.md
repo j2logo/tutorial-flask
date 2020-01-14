@@ -15,7 +15,7 @@ El miniblog a desarrollar tendrá las siguientes características:
 * Existirán dos tipos de usuario: administradores e invitados.
 * Un usuario administrador puede añadir, modificar y eliminar entradas del blog.
 * Los usuarios invitados pueden registrarse en el blog para comentar las diferentes entradas.
-* Un usuario administrador puede crear, modificar, eliminar y listar usuarios, además de poder asignarles el rol de administrador.
+* Un usuario administrador puede listar y eliminar usuarios, además de poder asignarles el rol de administrador.
 
 ## Lecciones del tutorial
 
@@ -27,7 +27,7 @@ El miniblog a desarrollar tendrá las siguientes características:
 * Lección 6: Estructura de un proyecto con Flask: blueprints
 * Lección 7: Parámetros de configuración de un proyecto Flask
 * Lección 8: Gestión de errores
-* Lección 9: Flask y trazas de log
+* Lección 9: Logs en Flask
 * Lección 10: Securizando los endpoints
 * Lección 11: Actualizando la base de datos
 * Lección 12: Test con Flask
@@ -35,20 +35,8 @@ El miniblog a desarrollar tendrá las siguientes características:
 * Lección 14: Envío de emails
 * Lección 15: Trabajando con Fechas
 * Lección 16: Trabajando con ficheros
-* Lección 17: Flask y PyCharm
-* Lección 18: Despliegue de una aplicación Flask en un entorno de producción
+* Lección 17: Despliegue de una aplicación Flask en un entorno de producción
 
-## Lecciones extra
-
-* Lección 19: Recordar contraseña
-* Lección 20: Ejecución de trabajos en background
-* Lección 21: Añadiendo peticiones AJAX
-* Lección 22: Internacionalización de la web
-* Lección 23: Crear un API con Flask: Flask-RESTful
-* Lección 24: Securizando el API
-* Lección 25: Gestión de errores del API
-* Lección 26: Documentando el API: flask-swagger-ui
-* Lección 27: Integrando mongodb
   
 ## Descarga e instalación del proyecto
 
@@ -95,7 +83,7 @@ basta con ejectuar:
 
 ## Ejecución con el servidor que trae Flask
 
-Una vez que hayas descargado el proyecto, creado las variables de entorno y descargado las dependencias,
+Una vez que hayas descargado el proyecto, creado las variables de entorno e instalado las dependencias,
 puedes arrancar el proyecto ejecutando:
 
     flask run

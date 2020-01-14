@@ -15,6 +15,10 @@
             <li><a href="{{ url_for('auth.show_signup_form') }}">Registrar</a></li>
         {% else %}
             <li>{{ current_user.name }}</li>
+            {% if current_user.is_admin %}
+                <li> | </li>
+                <li><a href="{{ url_for('admin.index') }}">Admin</a></li>
+            {% endif %}
             <li> | </li>
             <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
         {% endif %}
