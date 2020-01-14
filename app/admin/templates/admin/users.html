@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+    Listado de usuarios
+{% endblock %}
+
+{% block content %}
+    <ul>
+    {% for user in users %}
+        <li><a href="{{ url_for('admin.update_user_form', user_id=user.id) }}">{{ user.name }}</a> (Admin: {{ user.is_admin}})</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

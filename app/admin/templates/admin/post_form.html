@@ -29,4 +29,7 @@
             {{ form.submit() }}
         </div>
     </form>
+    <form action="{{ url_for('admin.delete_post', post_id=post.id) }}" method="post" novalidate>
+        <input type="submit" value="Eliminar" />
+    </form>
 {% endblock %}
