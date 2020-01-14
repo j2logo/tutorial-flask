@@ -9,4 +9,4 @@
 - leccion7 - Lección 7: Parámetros de configuración de un proyecto (21/07/2019)
 - leccion8 - Lección 8: Gestión de errores (23/11/2019)
 - leccion9 - Lección 9: Logs en Flask (13/01/2020)
-
+- leccion10 - Lección 10: Securizando los endpoints (15/01/2020)
