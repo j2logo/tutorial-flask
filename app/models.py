@@ -6,7 +6,8 @@ FECHA DE CREACIÓN: 15/02/2019
 
 """
 
-from flask import url_for
+import datetime
+
 from slugify import slugify
 from sqlalchemy.exc import IntegrityError
 
@@ -19,6 +20,7 @@ class Post(db.Model):
     title = db.Column(db.String(256), nullable=False)
     title_slug = db.Column(db.String(256), unique=True, nullable=False)
     content = db.Column(db.Text)
+    created = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
     def __repr__(self):
         return f'<Post {self.title}>'
