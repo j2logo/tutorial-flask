@@ -10,4 +10,4 @@
 - leccion8 - Lección 8: Gestión de errores (23/11/2019)
 - leccion9 - Lección 9: Logs en Flask (13/01/2020)
 - leccion10 - Lección 10: Añadiendo seguridad en las vistas (15/01/2020)
-- leccion11 - Lección 11: Actualizar la base de datos SQLAlchemy (dd/mm/aaaa)
+- leccion11 - Lección 11: Actualizar la base de datos SQLAlchemy (20/01/2020)
