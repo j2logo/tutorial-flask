@@ -5,4 +5,31 @@
 {% block content %}
     <h1>{{ post.title }}</h1>
     {{ post.content }}
+
+    <h2>Comentarios</h2>
+    {% if current_user.is_authenticated %}
+    <div>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.content.label }}
+                {{ form.content }}<br>
+                {% for error in form.content.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+    {% endif %}
+    <div id="comments">
+        {% for comment in post.comments %}
+            <div>
+                <div>El usuario {{ comment.user_name }} comentó:</div>
+                <div>{{ comment.content }}</div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
