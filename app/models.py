@@ -40,6 +40,7 @@ class Post(db.Model):
                 db.session.commit()
                 saved = True
             except IntegrityError:
+                db.session.rollback()
                 count += 1
                 self.title_slug = f'{self.title_slug}-{count}'
 

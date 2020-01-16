@@ -11,3 +11,4 @@
 - leccion9 - Lección 9: Logs en Flask (13/01/2020)
 - leccion10 - Lección 10: Añadiendo seguridad en las vistas (15/01/2020)
 - leccion11 - Lección 11: Actualizar la base de datos SQLAlchemy (20/01/2020)
+- leccion12 - Lección 12: Test con Flask (22/01/2020)

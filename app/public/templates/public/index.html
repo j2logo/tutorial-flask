@@ -6,6 +6,8 @@
     <ul>
     {% for post in posts %}
         <li><a href="{{ url_for('public.show_post', slug=post.title_slug) }}">{{ post.title }}</a></li>
+    {% else %}
+        <li>No hay entradas</li>
     {% endfor %}
     </ul>
 {% endblock %}
