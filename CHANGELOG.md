@@ -12,3 +12,8 @@
 - leccion10 - Lección 10: Añadiendo seguridad en las vistas (15/01/2020)
 - leccion11 - Lección 11: Actualizar la base de datos SQLAlchemy (20/01/2020)
 - leccion12 - Lección 12: Test con Flask (22/01/2020)
+- leccion13 - Lección 13: Paginar las consultas de base de datos (24/01/2020)
+- leccion14 - Lección 14: Enviar emails con Flask (27/01/2020)
+- leccion15 - Lección 15: Trabajar con Fechas en Flask (28/01/2020)
+- leccion16 - Lección 16: Procesar ficheros en Flask (29/01/2020)
+- leccion17 - Lección 17: Desplegar una aplicación Flask en un entorno de producción

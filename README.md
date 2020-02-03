@@ -31,11 +31,11 @@ El miniblog a desarrollar tendrá las siguientes características:
 * Lección 10: Añadiendo seguridad en las vistas
 * Lección 11: Actualizar la base de datos SQLAlchemy
 * Lección 12: Test con Flask
-* Lección 13: Paginando las consultas de base de datos
-* Lección 14: Envío de emails
-* Lección 15: Trabajando con Fechas
-* Lección 16: Trabajando con ficheros
-* Lección 17: Despliegue de una aplicación Flask en un entorno de producción
+* Lección 13: Paginar las consultas de base de datos
+* Lección 14: Enviar emails con Flask
+* Lección 15: Trabajar con Fechas en Flask
+* Lección 16: Procesar ficheros en Flask
+* Lección 17: Desplegar una aplicación Flask en un entorno de producción
 
   
 ## Descarga e instalación del proyecto
