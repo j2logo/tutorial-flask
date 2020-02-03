@@ -31,6 +31,11 @@ class PostModelTestCase(BaseTestClass):
             post_2 = Post(user_id=admin.id, title='Prueba', content='Lorem Ipsum Lorem Ipsum')
             post_2.save()
             self.assertEqual('prueba-1', post_2.title_slug)
+            post_3 = Post(user_id=admin.id, title='Prueba', content='Lorem Ipsum Lorem Ipsum')
+            post_3.save()
+            self.assertEqual('prueba-2', post_3.title_slug)
+            posts = Post.get_all()
+            self.assertEqual(3, len(posts))
 
 
 if __name__ == '__main__':
