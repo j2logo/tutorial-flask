@@ -21,6 +21,7 @@ class Post(db.Model):
     title_slug = db.Column(db.String(256), unique=True, nullable=False)
     content = db.Column(db.Text)
     created = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    image_name = db.Column(db.String)
     comments = db.relationship('Comment', backref='post', lazy=True, cascade='all, delete-orphan',
                                order_by='asc(Comment.created)')
 

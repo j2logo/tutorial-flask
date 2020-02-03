@@ -7,9 +7,11 @@ FECHA DE CREACIÓN: 24/05/2019
 """
 
 import logging
+import os
 
-from flask import render_template, redirect, url_for, abort
+from flask import render_template, redirect, url_for, abort, current_app
 from flask_login import login_required, current_user
+from werkzeug.utils import secure_filename
 
 from app.auth.decorators import admin_required
 from app.auth.models import User
@@ -44,7 +46,17 @@ def post_form():
     if form.validate_on_submit():
         title = form.title.data
         content = form.content.data
+        file = form.post_image.data
+        image_name = None
+        # Comprueba si se ha subido un fichero
+        if file:
+            image_name = secure_filename(file.filename)
+            images_dir = current_app.config['POSTS_IMAGES_DIR']
+            os.makedirs(images_dir, exist_ok=True)
+            file_path = os.path.join(images_dir, image_name)
+            file.save(file_path)
         post = Post(user_id=current_user.id, title=title, content=content)
+        post.image_name = image_name
         post.save()
         logger.info(f'Guardando nuevo post {title}')
         return redirect(url_for('admin.list_posts'))
@@ -67,6 +79,15 @@ def update_post_form(post_id):
         # Actualiza los campos del post existente
         post.title = form.title.data
         post.content = form.content.data
+        file = form.post_image.data
+        # Comprueba si se ha subido un fichero
+        if file:
+            image_name = secure_filename(file.filename)
+            images_dir = current_app.config['POSTS_IMAGES_DIR']
+            os.makedirs(images_dir, exist_ok=True)
+            file_path = os.path.join(images_dir, image_name)
+            file.save(file_path)
+            post.image_name = image_name
         post.save()
         logger.info(f'Guardando el post {post_id}')
         return redirect(url_for('admin.list_posts'))
