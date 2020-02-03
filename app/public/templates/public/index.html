@@ -5,11 +5,16 @@
 {% block content %}
     <ul>
     {% for post in post_pagination.items %}
-        <li><a href="{{ url_for('public.show_post', slug=post.title_slug) }}">{{ post.title }}</a></li>
+        <li>
+            <a href="{{ url_for('public.show_post', slug=post.title_slug) }}">
+                {{ post.title }} <span class="blogDate">({{ post.created|datetime }})</span>
+            </a>
+        </li>
     {% else %}
         <li>No hay entradas</li>
     {% endfor %}
     </ul>
+
     <div class=pagination>
         {%- for page in post_pagination.iter_pages() %}
             {% if page %}
