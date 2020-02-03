@@ -4,6 +4,14 @@
 
 {% block content %}
     <h1>{{ post.title }}</h1>
+    <div>
+        <span class="blogDate">{{ post.created|datetime('full') }}</span>
+    </div>
+    {% if post.image_name %}
+        <div>
+            <img src="{{ url_for('media_posts', filename=post.image_name) }}" />
+        </div>
+    {% endif %}
     {{ post.content }}
 
     <h2>Comentarios</h2>
@@ -27,7 +35,10 @@
     <div id="comments">
         {% for comment in post.comments %}
             <div>
-                <div>El usuario {{ comment.user_name }} comentó:</div>
+                <div>
+                    El usuario {{ comment.user_name }} comentó el
+                    <span class="blogDate">{{ comment.created|datetime }}</span>:
+                </div>
                 <div>{{ comment.content }}</div>
             </div>
         {% endfor %}
