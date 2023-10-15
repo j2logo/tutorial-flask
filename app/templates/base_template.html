@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Curso de Flask{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for("static", filename="base.css") }}">
 </head>
 <body>
@@ -17,10 +17,10 @@
             <li>{{ current_user.name }}</li>
             {% if current_user.is_admin %}
                 <li> | </li>
-                <li><a href="{{ url_for('admin.index') }}">Admin</a></li>
+                <li><a href="{{ url_for('admin.index') }}">Administrador</a></li>
             {% endif %}
             <li> | </li>
-            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('auth.logout') }}">Salir</a></li>
         {% endif %}
     </ul>
 </div>
